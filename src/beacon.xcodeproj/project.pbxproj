@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0157A61986904C00DB05A6 /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0157A51986904C00DB05A6 /* DataService.m */; };
+		DA0157A91986B38B00DB05A6 /* ibeacon-logo-small_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0157A81986B38B00DB05A6 /* ibeacon-logo-small_2x.png */; };
+		DA0157AE1986B7AD00DB05A6 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0157AA1986B7AD00DB05A6 /* green.png */; };
+		DA0157AF1986B7AD00DB05A6 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0157AB1986B7AD00DB05A6 /* grey.png */; };
+		DA0157B01986B7AD00DB05A6 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0157AC1986B7AD00DB05A6 /* red.png */; };
+		DA0157B11986B7AD00DB05A6 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0157AD1986B7AD00DB05A6 /* yellow.png */; };
 		DAEB38A61982A1CB00F04675 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEB38A51982A1CB00F04675 /* Cocoa.framework */; };
 		DAEB38B01982A1CB00F04675 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAEB38AE1982A1CB00F04675 /* InfoPlist.strings */; };
 		DAEB38B21982A1CB00F04675 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB38B11982A1CB00F04675 /* main.m */; };
@@ -34,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA0157A41986904C00DB05A6 /* DataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
+		DA0157A51986904C00DB05A6 /* DataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
+		DA0157A81986B38B00DB05A6 /* ibeacon-logo-small_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ibeacon-logo-small_2x.png"; sourceTree = "<group>"; };
+		DA0157AA1986B7AD00DB05A6 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		DA0157AB1986B7AD00DB05A6 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
+		DA0157AC1986B7AD00DB05A6 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		DA0157AD1986B7AD00DB05A6 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
 		DAEB38A21982A1CB00F04675 /* beacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEB38A51982A1CB00F04675 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DAEB38A81982A1CB00F04675 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -81,6 +94,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA0157A71986B37E00DB05A6 /* art */ = {
+			isa = PBXGroup;
+			children = (
+				DA0157AA1986B7AD00DB05A6 /* green.png */,
+				DA0157AB1986B7AD00DB05A6 /* grey.png */,
+				DA0157AC1986B7AD00DB05A6 /* red.png */,
+				DA0157AD1986B7AD00DB05A6 /* yellow.png */,
+				DA0157A81986B38B00DB05A6 /* ibeacon-logo-small_2x.png */,
+			);
+			name = art;
+			sourceTree = "<group>";
+		};
 		DAEB38991982A1CB00F04675 = {
 			isa = PBXGroup;
 			children = (
@@ -123,10 +148,11 @@
 		DAEB38AB1982A1CB00F04675 /* beacon */ = {
 			isa = PBXGroup;
 			children = (
+				DA0157A71986B37E00DB05A6 /* art */,
 				DAEB38E41982BFFB00F04675 /* core */,
 				DAEB38E61982C00800F04675 /* controllers */,
 				DAEB38E51982C00200F04675 /* views */,
-				DAEB38E71982C00D00F04675 /* services */,
+				DAEB38E71982C00D00F04675 /* model */,
 				DAEB38BD1982A1CB00F04675 /* Images.xcassets */,
 				DAEB38AC1982A1CB00F04675 /* Supporting Files */,
 			);
@@ -190,13 +216,15 @@
 			name = controllers;
 			sourceTree = "<group>";
 		};
-		DAEB38E71982C00D00F04675 /* services */ = {
+		DAEB38E71982C00D00F04675 /* model */ = {
 			isa = PBXGroup;
 			children = (
 				DAEB38E11982BFF000F04675 /* IBeacon.h */,
 				DAEB38E21982BFF000F04675 /* IBeacon.m */,
+				DA0157A41986904C00DB05A6 /* DataService.h */,
+				DA0157A51986904C00DB05A6 /* DataService.m */,
 			);
-			name = services;
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,10 +303,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0157AE1986B7AD00DB05A6 /* green.png in Resources */,
 				DAEB38B01982A1CB00F04675 /* InfoPlist.strings in Resources */,
+				DA0157AF1986B7AD00DB05A6 /* grey.png in Resources */,
+				DA0157B01986B7AD00DB05A6 /* red.png in Resources */,
 				DAEB38BE1982A1CB00F04675 /* Images.xcassets in Resources */,
 				DAEB38E01982B48C00F04675 /* MainViewController.xib in Resources */,
 				DAEB38B61982A1CB00F04675 /* Credits.rtf in Resources */,
+				DA0157B11986B7AD00DB05A6 /* yellow.png in Resources */,
+				DA0157A91986B38B00DB05A6 /* ibeacon-logo-small_2x.png in Resources */,
 				DAEB38BC1982A1CB00F04675 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAEB38B91982A1CB00F04675 /* AppDelegate.m in Sources */,
+				DA0157A61986904C00DB05A6 /* DataService.m in Sources */,
 				DAEB38E31982BFF000F04675 /* IBeacon.m in Sources */,
 				DAEB38DF1982B48C00F04675 /* MainViewController.m in Sources */,
 				DAEB38B21982A1CB00F04675 /* main.m in Sources */,
@@ -514,6 +548,7 @@
 				DAEB38D51982A1CB00F04675 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAEB38D61982A1CB00F04675 /* Build configuration list for PBXNativeTarget "beaconTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +557,7 @@
 				DAEB38D81982A1CB00F04675 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

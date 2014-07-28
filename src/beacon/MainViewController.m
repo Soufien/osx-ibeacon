@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 
-@interface MainViewController ()
+@interface MainViewController () <NSTableViewDataSource, NSTableViewDelegate>
 
 @end
 
@@ -21,6 +21,26 @@
         // Initialization code here.
     }
     return self;
+}
+
+#pragma mark - NSTableViewDelegate
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+    return 10;
+}
+
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    NSTableCellView *cellView = [tableView makeViewWithIdentifier:tableColumn.identifier
+                                                            owner:self];
+    if ([tableColumn.identifier isEqualToString:@"BeaconColumn"]) {
+        cellView.textField.stringValue = [NSString stringWithFormat:@"Item %ld", (long)row];
+        
+        NSImage *image = [NSImage imageNamed:@"green.png"];
+        cellView.imageView.image = image;
+    }
+    return cellView;
 }
 
 @end
